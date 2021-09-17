@@ -1,7 +1,10 @@
 import React from "react";
+import "./TodoSearch.css";
 
 function TodoSearch() {
-  return <h3>My Search...</h3>;
+  return (
+    <input className="TodoSearch" placeholder="Ingresar tarea" type="text" />
+  );
 }
 
 export { TodoSearch };

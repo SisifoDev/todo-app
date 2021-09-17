@@ -1,5 +1,4 @@
 import { TodoCounter } from "./TodoCounter";
-import "./App.css";
 import { TodoSearch } from "./TodoSearch";
 import { TodoList } from "./TodoList";
 import { CreateTodoButton } from "./CreateTodoButton";
@@ -13,17 +12,20 @@ const todos = [
 
 function App() {
   return (
-    <div className="App">
+    <>
       <TodoCounter />
       <TodoSearch />
-      <input type="text" placeholder="cebolla" />
-      <TodoList todos={todos}>
+      <TodoList>
         {todos.map((todo) => (
-          <TodoItem text={todo.text} />
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+          />
         ))}
       </TodoList>
       <CreateTodoButton />
-    </div>
+    </>
   );
 }
 
