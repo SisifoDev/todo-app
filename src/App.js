@@ -17,9 +17,9 @@ function App() {
       <TodoCounter />
       <TodoSearch />
       <input type="text" placeholder="cebolla" />
-      <TodoList>
+      <TodoList todos={todos}>
         {todos.map((todo) => (
-          <TodoItemy />
+          <TodoItem text={todo.text} />
         ))}
       </TodoList>
       <CreateTodoButton />

@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateTodoButton() {
+function CreateTodoButton(props) {
   return <button>+</button>;
 }
 
